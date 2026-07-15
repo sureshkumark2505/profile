@@ -2,6 +2,10 @@
    GLOBAL
 ========================================== */
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +13,10 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #eef2f7;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #FBEFEF;
   color: #333;
-  padding: 20px 10px;
+  padding: 15px 10px;
 }
 
 a {
@@ -41,7 +45,7 @@ a {
 
 .banner {
 
-  height: 160px;
+  height: 120px;
   overflow: hidden;
   position: relative;
 
@@ -92,7 +96,7 @@ a {
 .profile-section h1 {
 
   margin-top: 10px;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 600;
   color: #222;
 
@@ -129,25 +133,26 @@ a {
 
 section {
 
-  padding: 14px 18px;
+  padding: 5px 10px;
   border-top: 1px solid #ececec;
 
 }
 
 section h2 {
 
-  font-size: 18px;
+  font-size: 16px;
   color: #1565C0;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 
 }
 
 section p {
 
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 13.5px;
+  line-height: 1.55;
   color: #555;
   text-align: justify;
+  font-weight: 100;
 
 }
 
@@ -179,25 +184,32 @@ section p {
 
 details {
 
-  border: 1px solid #e5e5e5;
-  border-radius: 8px;
-  margin: 6px 0;
+  border: none;
+  border-radius: 0;
+  margin: 3px 0;
   overflow: hidden;
-  background: white;
+  background: transparent;
 
 }
 
 summary {
 
-  padding: 10px 14px;
+  padding: 6px 0;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 13.5px;
   font-weight: 600;
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 
+}
+
+summary:hover {
+  transform: translateY(-2px);
+  color: #1565C0;
+  transition: all 0.2s ease-in-out;
+  border-radius: 20px;
 }
 
 summary::-webkit-details-marker {
@@ -209,7 +221,7 @@ summary::-webkit-details-marker {
 summary::before {
 
   content: "▶";
-  font-size: 11px;
+  font-size: 10px;
   transition: .25s;
 
 }
@@ -222,31 +234,31 @@ details[open] summary::before {
 
 details[open] summary {
 
-  border-bottom: 1px solid #ececec;
+  border-bottom: none;
 
 }
 
 details ul {
 
-  padding: 10px 28px;
+  padding: 4px 18px;
   margin: 0;
 
 }
 
 details li {
 
-  margin-bottom: 6px;
-  font-size: 13px;
-  line-height: 1.5;
+  margin-bottom: 4px;
+  font-size: 12.5px;
+  line-height: 1.4;
 
 }
 
 details a {
 
   display: block;
-  padding: 0 28px 10px;
+  padding: 0 18px 4px;
   color: #1565C0;
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 500;
 
 }
@@ -293,7 +305,6 @@ details a:hover {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: #1565C0;
   color: white;
 
   display: flex;
@@ -302,15 +313,64 @@ details a:hover {
 
   font-size: 17px;
 
-  transition: .25s;
+  transition: all .25s ease-in-out;
 
 }
 
 .social a:hover {
 
-  background: #0d47a1;
   transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
+}
+
+.social a.social-phone {
+  background: #25D366;
+}
+.social a.social-phone:hover {
+  background: #1ebd52;
+}
+
+.social a.social-email {
+  background: #EA4335;
+}
+.social a.social-email:hover {
+  background: #d63124;
+}
+
+.social a.social-linkedin {
+  background: #0077B5;
+}
+.social a.social-linkedin:hover {
+  background: #005a87;
+}
+
+.social a.social-scholar {
+  background: #4285F4;
+}
+.social a.social-scholar:hover {
+  background: #2b6dd9;
+}
+
+.social a.social-researchgate {
+  background: #00CCBB;
+}
+.social a.social-researchgate:hover {
+  background: #00a396;
+}
+
+.social a.social-orcid {
+  background: #A6CE39;
+}
+.social a.social-orcid:hover {
+  background: #8aa82b;
+}
+
+.social a.social-github {
+  background: #181717;
+}
+.social a.social-github:hover {
+  background: #000000;
 }
 
 /* ==========================================
@@ -339,6 +399,34 @@ footer small {
   margin-top: 4px;
   font-size: 12px;
   opacity: .9;
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.connect-btn {
+
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #476de7;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
+  transition: .3s;
+  z-index: 999;
+}
+
+.connect-btn:hover {
+
+  background: #240fe0;
 
 }
 
@@ -393,19 +481,19 @@ footer small {
 
   section {
 
-    padding: 12px 16px;
+    padding: 8px 14px;
 
   }
 
   section h2 {
 
-    font-size: 17px;
+    font-size: 15.5px;
 
   }
 
   section p {
 
-    font-size: 13px;
+    font-size: 12.5px;
 
   }
 
@@ -417,13 +505,13 @@ footer small {
 
   summary {
 
-    font-size: 14px;
+    font-size: 13px;
 
   }
 
   details li {
 
-    font-size: 12px;
+    font-size: 11.5px;
 
   }
 

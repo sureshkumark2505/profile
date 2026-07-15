@@ -103,14 +103,13 @@
 
     </section>
 
-    <!-- Publications -->
-
+    <!-- Portfolio Details -->
     <section>
 
       <details>
 
         <summary>
-          📚 Selected Publications
+          Publications
         </summary>
 
         <ul>
@@ -138,16 +137,10 @@
 
       </details>
 
-    </section>
-
-    <!-- Patents -->
-
-    <section>
-
       <details>
 
         <summary>
-          🏆 Selected Patents
+          Patents
         </summary>
 
         <ul>
@@ -174,16 +167,10 @@
 
       </details>
 
-    </section>
-
-    <!-- Experience -->
-
-    <section>
-
       <details>
 
         <summary>
-          👩‍🏫 Professional Experience
+          Professional Experience
         </summary>
 
         <ul>
@@ -230,37 +217,39 @@
 
     <!-- Links -->
 
-    <section>
+    <section id="connect">
 
       <h2>Connect</h2>
 
       <div class="social">
 
-        <a href="tel:+917624848057">
+        <a href="tel:+917624848057" class="social-phone" title="Phone">
           <i class="fa-solid fa-phone"></i>
         </a>
 
-        <a href="mailto:shymala1990@gmail.com">
+        <a href="mailto:shymala1990@gmail.com" class="social-email" title="Email">
           <i class="fa-solid fa-envelope"></i>
         </a>
 
-        <a href="#">
+        <a href="https://www.linkedin.com/in/shyamala-krishnan-6b3118155/" class="social-linkedin" title="LinkedIn">
           <i class="fa-brands fa-linkedin-in"></i>
         </a>
 
-        <a href="#">
-          <i class="fa-solid fa-graduation-cap"></i>
+        <a href="https://scholar.google.com/citations?user=7OjMqjAAAAAJ&hl=en" class="social-scholar"
+          title="Google Scholar">
+          <i class="fa-brands fa-google-scholar"></i>
         </a>
 
-        <a href="#">
+        <a href="https://www.researchgate.net/profile/Shyamala-Krishnan-2?ev=hdr_xprf" class="social-researchgate"
+          title="ResearchGate">
           <i class="fa-brands fa-researchgate"></i>
         </a>
 
-        <a href="#">
-          <i class="fa-solid fa-id-card"></i>
+        <a href="https://orcid.org/0000-0001-7269-3844" class="social-orcid" title="ORCID">
+          <i class="fa-brands fa-orcid"></i>
         </a>
 
-        <a href="#">
+        <a href="#" class="social-github" title="GitHub">
           <i class="fa-brands fa-github"></i>
         </a>
 
@@ -283,7 +272,32 @@
     </footer>
 
   </div>
-
+  <a href="#connect" class="connect-btn">
+    Connect
+  </a>
 </body>
+<script>
+
+  const button = document.querySelector(".connect-btn");
+
+  const connect = document.querySelector("#connect");
+
+  window.addEventListener("scroll", () => {
+
+    const top = connect.getBoundingClientRect().top;
+
+    if (top < window.innerHeight) {
+
+      button.style.display = "none";
+
+    } else {
+
+      button.style.display = "block";
+
+    }
+
+  });
+
+</script>
 
 </html>
