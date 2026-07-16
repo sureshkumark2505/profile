@@ -78,18 +78,18 @@ a {
   margin-top: -60px;
   position: relative;
   z-index: 5;
-  padding: 0 18px 12px;
+  padding: 0px 18px 12px;
 
 }
 
 .profile {
 
-  width: 120px;
-  height: 120px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: 4px solid white;
+  border: 2px solid rgb(196, 218, 235);
   object-fit: cover;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, .2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
 
 }
 
@@ -116,6 +116,7 @@ a {
   margin-top: 4px;
   font-size: 14px;
   color: #666;
+  font-weight: 300;
 
 }
 
@@ -124,6 +125,7 @@ a {
   margin-top: 5px;
   font-size: 13px;
   color: #444;
+  font-weight: 500;
 
 }
 
@@ -152,7 +154,7 @@ section p {
   line-height: 1.55;
   color: #555;
   text-align: justify;
-  font-weight: 100;
+  font-weight:bold;
 
 }
 
@@ -284,6 +286,7 @@ details a:hover {
   margin-bottom: 6px;
   font-size: 13px;
   line-height: 1.5;
+  font-weight: bold;
 
 }
 
